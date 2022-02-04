@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;  
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+}
+.container{
+    position: relative;
+    text-align: center;
+    
+    
+
+    
+}
+.container .card
+{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    min-width: 250px;
+    flex-basis: 30%;
+    margin-bottom: 30px;
+    background: #232323;
+    text-align: center;
+   
+    display:inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.container .card:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  #389fff;
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+.container .card:hover:before
+{
+ clip-path: circle(300px at 80% -20%);
+}
+.container .card .imgBx
+{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+
+}
+.container .card:hover .imgBx{
+    top: 0%;
+    
+    transform: translateY(0%);
+
+}
+.container .card .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    width: 184px;
+}
+
+.container .card .contentBx{
+    position: absolute;
+    bottom:  0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+}
+.container .card:hover .contentBx{
+    height: 210px;
+}
+.container .card .contentBx h2{
+   position: relative;
+   font-weight: 600;
+   letter-spacing: 1px;
+   color: #fff;
+}
+.container .card .contentBx .cantidad,
+.container .card .contentBx .consola
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px; 
+    transition: 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    
+    
+}
+.container .card:hover  .contentBx .cantidad {
+   opacity: 1;
+   visibility: visible;
+   transition: 0.5s;
+}
+.container .card:hover  .contentBx .consola {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.6s;
+ }
+.container .card  .contentBx .cantidad h3,
+.container .card  .contentBx .consola h3
+{
+ color: #fff;
+ font-weight: 300;
+ font-size: 14px;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ margin-right: 10px;
+
+}
+.container  .card .contentBx .cantidad span
+{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin:  0 5px;
+    transition: 0.5s;
+    border-radius: 4px;
+    cursor: pointer;
+    
+
+
+}
+.container .card .contentBx .cantidad span:hover{
+    background-color:#389fff ;
+    color: #fff;
+}
+
+
+.container .card .contentBx .consola img{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin:  0 3px;
+    transition: 0.5s;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+   
+}
+
+.container .card .contentBx a 
+{
+display: inline-block;
+padding:  10px 20px;
+background: #fff;
+border-radius: 4px;
+margin-top: 10px;
+text-decoration: none;
+font-weight: 600;
+color: #111;
+opacity: 0;
+transform: translateY(50px);
+transition: 0.5s;
+}
+
+.container  .card:hover .contentBx a
+{
+    opacity: 1;
+    transform: translateY(0px);
+    transition-delay: 0.2s;
+    
+}
+
+

@@ -1,0 +1,44 @@
+{% extends 'store/main.html' %}
+{% load static %}
+{% block content %}
+
+
+   
+ <div class="container">
+    {% for product in products %}
+            <div class="card">
+              
+             <div class=" imgBx">
+               <img src="{% static 'image/NHL20.jpg' %}">
+               </div> 
+               <div class="contentBx">
+                   <h2>{{product.name}}</h2>
+               <div class="cantidad">
+                   <h3>Cantidad</h3>
+                   <span>1</span>
+                   <span>2</span>
+                   <span>3</span>
+                   <span>4</span>
+                   <span>5</span>
+               </div>
+               <div class="consola">
+                <h3>Consola</h3>
+                <img src="{% static 'image/xbox.jpg' %}">
+                <img src="{% static 'image/PlayStation.png' %}">
+                <img src="{% static 'image/Switch.png' %}">
+                
+                
+         
+        </div>
+        
+            <a href="#">Comprar ahora</a>
+               </div>
+               </div> 
+             {% endfor %}
+                  </div>
+           
+           
+       
+
+
+{% endblock content %}

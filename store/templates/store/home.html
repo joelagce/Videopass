@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+     <title>Videopass</title>
+   <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+   
+</head>
+<body>
+    <section class="sec">
+        <header>
+        <a href="#"><img src="{% static 'image/iconslogo.png' %}" class="logo"></a>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="{% url 'store' %}">Catalogo</a></li>
+            <li class="btn"> <a href="#" >Iniciar sesion</a></li> 
+        </ul>
+
+        
+        
+    </header>
+    <div class="content">
+        <div class="textBox">
+            <h2>Los mejores Videojuegos<br><span>Que encontraras</span></h2>
+            <p>El catalogo de videojuegos 
+            mas completo y con la suscripcion mas accessible del mercado</p>
+            <a href="{% url 'store' %}">Ver todo el catalogo</a>
+        </div>
+        <div class="imgBox">
+            <img src="{% static 'image/Nba2k21.jpg' %}"  class="nba2k21" >
+    </div>
+    </div>
+    <ul class="thumb">
+        <li><img src="{% static 'image/Nba2k21.jpg' %}" onclick="imgSlider('/static/image/Nba2k21.jpg'); changeBgcolor('#0062be')"></li>
+        <li><img src="{% static 'image/Fifa 21.jpg' %}" onclick="imgSlider('/static/image/Fifa 21.jpg'); changeBgcolor('#e60c2c')"></li>
+        <li><img src="{% static 'image/nba-2kplaygrounds2jpg.jpg' %}"  onclick="imgSlider('/static/image/nba-2kplaygrounds2jpg.jpg'); changeBgcolor('#FF6442')"></li>
+
+    </ul>
+    <ul class="sci">
+        <li><a href="#"><img src="{% static 'image/facebook.png' %}"></a></li>
+        <li><a href="#"><img src="{% static 'image/instagram.png' %}"></a></li>
+    </ul>
+    </section>
+    <script type="text/javascript">
+    function imgSlider(anything){
+        document.querySelector('.nba2k21').src = anything;
+    }
+    function changeBgcolor(color){
+        const sec = document.querySelector('.sec');
+        sec.style.background = color;
+    }
+    </script>
+    
+</body>
+</html>
