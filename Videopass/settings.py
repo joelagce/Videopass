@@ -26,7 +26,7 @@ SECRET_KEY = 'fziu)1nhx14!=8ssz0n6oalyst1yk2+idi#al(f!4qjkpuzk$u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['3.17.160.255']
 
 
 # Application definition
@@ -135,3 +135,4 @@ STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 ]
+STATIC_ROOT = '/var/www/Videopass/assets/'
